@@ -10,7 +10,7 @@ app.use("/api/v1/", users);
 app.get("/", (req, res) => {
   res.send("hello");
 });
-const port = 5000;
+const port = process.env.PORT || 5000;
 const start = async () => {
   try {
     app.listen(port, console.log(`server is listening to port ${port}`));

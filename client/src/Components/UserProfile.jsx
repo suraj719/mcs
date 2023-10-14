@@ -10,7 +10,7 @@ export default function UserProfile() {
   const [recusers, setRecusers] = useState();
   const fetchdata = () => {
     setIsloading(true);
-    fetch(`http://localhost:5000/api/v1/user/${username}`)
+    fetch(`https://mcs-backend-jgo8.onrender.com/api/v1/user/${username}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data.response);
